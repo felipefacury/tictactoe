@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/felipefacury/envs/ATR/ex2/tictactoe/build",
-  "command": "/usr/bin/g++   -g -std=gnu++11 -o CMakeFiles/tic_tac_toe.dir/src/tic_tac_toe.cpp.o -c /home/felipefacury/envs/ATR/ex2/tictactoe/src/tic_tac_toe.cpp",
-  "file": "/home/felipefacury/envs/ATR/ex2/tictactoe/src/tic_tac_toe.cpp"
-}
-]

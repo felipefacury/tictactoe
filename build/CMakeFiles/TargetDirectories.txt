@@ -1,3 +1,0 @@
-/home/felipefacury/envs/ATR/ex2/tictactoe/build/CMakeFiles/tic_tac_toe.dir
-/home/felipefacury/envs/ATR/ex2/tictactoe/build/CMakeFiles/edit_cache.dir
-/home/felipefacury/envs/ATR/ex2/tictactoe/build/CMakeFiles/rebuild_cache.dir
