@@ -27,7 +27,7 @@ public:
 
     void display_board() {
         // Exibir o tabuleiro no console
-        system("clear"); // Limpa o terminal (no Linux e macOS)
+        system("clear");
 
         for (const auto& row : board) {
             int i = 0;
@@ -63,13 +63,13 @@ public:
         
         if (row < 0 || row >= 3 || col < 0 || col >= 3 || board[row][col] != ' ') {
             std::cerr << "Jogada inválida!" << std::endl;
-            return false; // Jogada inválida
+            return false;
         }
-        board[row][col] = player; // Realizar a jogada
+        board[row][col] = player;
         display_board();
-        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // Adicionar um delay de 500ms
-        this->current_player = (this->current_player == 'X') ? 'O' : 'X'; // Alternar jogador
-        this->turn_cv.notify_all(); // Notificar outros jogadores
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        this->current_player = (this->current_player == 'X') ? 'O' : 'X';
+        this->turn_cv.notify_all();
         
         return true;
     }
@@ -103,7 +103,7 @@ public:
             this->winner = player;
             return true;
         }
-        return false; // Se não houver vencedor, retornar falso
+        return false;
     }
 
     bool check_draw() {
@@ -111,13 +111,13 @@ public:
         for(auto& row : board) {
             for(auto& cell : row) {
                 if(cell == ' ')
-                    return false; // Se houver uma célula vazia, não é empate
+                    return false;
 
             }
         }
-        this->game_over = true; // Se não houver células vazias, o jogo termina
-        this->winner = 'D'; // Definir o vencedor como empate
-        return !check_win('X') && !check_win('O'); // Se não houver vencedor, é empate
+        this->game_over = true;
+        this->winner = 'D';
+        return !check_win('X') && !check_win('O');
     }
 
     bool is_game_over() {
@@ -129,7 +129,7 @@ public:
         // Retornar o vencedor do jogo ('X', 'O', ou 'D' para empate)
         if (!this->game_over)
             return ' ';
-        return this->winner; // Retornar o vencedor
+        return this->winner;
     }
 };
 
